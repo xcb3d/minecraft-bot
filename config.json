@@ -2,7 +2,7 @@
     "host":  "vinamc.net",
     "port":  25565,
     "version":  "1.20.4",
-    "botCount":  4,
+    "botCount":  2,
     "joinDelay":  5000,
     "moveInterval":  0,
     "chatInterval":  0,

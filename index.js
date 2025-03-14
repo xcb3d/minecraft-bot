@@ -4,6 +4,7 @@ const readline = require('readline');
 const path = require('path');
 const fs = require('fs');
 const { loadProxiesFromFile, saveProxiesToFile } = require('./proxy-loader');
+const { generateRandomName, generateRandomNames } = require('./name-generator');
 
 // Khởi động health check server nếu đang chạy trên Render
 const isCloudEnvironment = process.env.NODE_ENV === 'production' || process.env.CLOUD_ENV === 'true';
@@ -23,7 +24,6 @@ const DEFAULT_CONFIG = {
   chatInterval: 10000, // How often bots chat in ms
   chatMessages: ['Hello', 'Hi there', 'What\'s up?', 'Nice server'],
   actions: ['jump', 'rotate', 'walk', 'chat'], // Available actions
-  username: 'Bot_', // Will be appended with a number
   auth: 'offline', // 'offline' or 'microsoft'
   proxy: {
     enabled: false,
@@ -110,10 +110,18 @@ const commands = {
     isRunning = true;
     console.log(`Starting ${config.botCount} bots...`);
     
+    // Tạo danh sách tên ngẫu nhiên trước
+    const randomNames = generateRandomNames(config.botCount);
+    console.log('Generated random names for bots:');
+    randomNames.forEach((name, index) => {
+      console.log(`  Bot ${index}: ${name}`);
+    });
+    
     // Start bots with delay between each
     for (let i = 0; i < config.botCount; i++) {
       setTimeout(() => {
-        const username = `${config.username}${i + 1}`;
+        // Sử dụng tên từ danh sách đã tạo
+        const username = randomNames[i];
         startBotWorker(i, username);
       }, i * config.joinDelay);
     }
@@ -423,7 +431,7 @@ function startBotWorker(id, username) {
   });
   
   workers.set(id, worker);
-  console.log(`Started bot ${id} (${username})${proxy ? ` using proxy ${proxy.host}:${proxy.port} (${proxy.type})` : ''}`);
+  console.log(`Started bot ${id} with name "${username}"${proxy ? ` using proxy ${proxy.host}:${proxy.port} (${proxy.type})` : ''}`);
 }
 
 // Process user commands

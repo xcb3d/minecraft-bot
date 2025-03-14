@@ -2,7 +2,7 @@
     "host":  "vinamc.net",
     "port":  25565,
     "version":  "1.20.4",
-    "botCount":  3,
+    "botCount":  4,
     "joinDelay":  5000,
     "moveInterval":  0,
     "chatInterval":  0,
@@ -19,7 +19,6 @@
                          "How many players can join?"
                      ],
     "actions":  [],
-    "username":  "StressTest_",
     "auth":  "offline",
     "autoStart": true,
     "proxy": {

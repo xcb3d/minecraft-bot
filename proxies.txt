@@ -1,0 +1,11 @@
+# Danh sách proxy mẫu
+# Định dạng: host:port hoặc host:port:username:password
+# Bạn có thể thay thế bằng danh sách proxy thực của mình
+
+# HTTP proxies
+127.0.0.1:58513
+127.0.0.1:49356
+
+# Proxies với xác thực
+# 192.168.1.100:8080:username:password
+# 192.168.1.101:8080:username:password 

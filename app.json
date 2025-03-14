@@ -1,0 +1,21 @@
+{
+  "name": "Minecraft Bot Controller",
+  "description": "A multi-threaded Minecraft bot controller for testing server load capacity",
+  "repository": "https://github.com/yourusername/cilis-minecraft-bot",
+  "keywords": ["node", "minecraft", "bot", "mineflayer"],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment for the application",
+      "value": "production"
+    },
+    "CLOUD_ENV": {
+      "description": "Flag to indicate cloud environment",
+      "value": "true"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+} 

@@ -1,0 +1,29 @@
+{
+  "name": "cilis-minecraft-bot",
+  "version": "1.0.0",
+  "description": "A multi-threaded Minecraft bot controller for stress testing servers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [
+    "minecraft",
+    "bot",
+    "stress-test",
+    "mineflayer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-proxy-agent": "^7.0.0",
+    "https-proxy-agent": "^7.0.2",
+    "mineflayer": "^4.25.0",
+    "minecraft-protocol-forge": "^1.0.0",
+    "socks": "^2.7.1",
+    "vec3": "^0.1.10"
+  }
+}

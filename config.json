@@ -1,0 +1,35 @@
+{
+    "host":  "aemine.vn",
+    "port":  25565,
+    "version":  "1.20.4",
+    "botCount":  3,
+    "joinDelay":  5000,
+    "moveInterval":  0,
+    "chatInterval":  0,
+    "chatMessages":  [
+                         "Hello server",
+                         "Testing server load",
+                         "How\u0027s the performance?",
+                         "Nice server you have here",
+                         "Just checking things out",
+                         "Is the server lagging?",
+                         "Can you handle more players?",
+                         "Testing, testing, 1, 2, 3",
+                         "This is a stress test",
+                         "How many players can join?"
+                     ],
+    "actions":  [],
+    "username":  "StressTest_",
+    "auth":  "offline",
+    "autoStart": true,
+    "proxy": {
+        "enabled": false,
+        "type": "http",
+        "host": "127.0.0.1",
+        "port": 8080,
+        "username": "",
+        "password": "",
+        "rotateProxies": false,
+        "proxyList": []
+    }
+}
